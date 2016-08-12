@@ -3617,6 +3617,61 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="battery">
+<description>Battery holders and clips</description>
+<packages>
+<package name="KEYSTONE_3003">
+<description>Keystone 3003 20mm coin cell battery clip</description>
+<pad name="P$1" x="-10.5537" y="0" drill="1.6" diameter="2.54"/>
+<pad name="P$2" x="10.5537" y="0" drill="1.6" diameter="2.54"/>
+<circle x="0" y="0" radius="10" width="0.127" layer="21"/>
+<pad name="P$3" x="0" y="0" drill="0.7" diameter="6.4516" shape="octagon"/>
+<wire x1="-10.5537" y1="9.2964" x2="-10.5537" y2="-4.064" width="0.127" layer="21"/>
+<wire x1="-10.5537" y1="-4.064" x2="-3.7846" y2="-10.5664" width="0.127" layer="21"/>
+<wire x1="-3.7846" y1="-10.5664" x2="3.7846" y2="-10.5664" width="0.127" layer="21"/>
+<wire x1="3.7846" y1="-10.5664" x2="10.5537" y2="-4.064" width="0.127" layer="21"/>
+<wire x1="10.5537" y1="-4.064" x2="10.5537" y2="9.2964" width="0.127" layer="21"/>
+<wire x1="10.5537" y1="9.2964" x2="-10.5537" y2="9.2964" width="0.127" layer="21"/>
+<text x="-10.16" y="10.16" size="1.27" layer="25">&gt;NAME</text>
+<text x="-10.16" y="-11.43" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="1V2">
+<wire x1="-0.635" y1="0.635" x2="-0.635" y2="0" width="0.4064" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-0.635" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="0" x2="-0.635" y2="-0.635" width="0.4064" layer="94"/>
+<wire x1="0.635" y1="2.54" x2="0.635" y2="0" width="0.4064" layer="94"/>
+<wire x1="0.635" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.635" y1="0" x2="0.635" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-1.27" y="3.175" size="1.778" layer="95">&gt;NAME</text>
+<text x="-1.27" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<text x="1.27" y="0.635" size="1.524" layer="94">+</text>
+<text x="-1.905" y="0.635" size="1.524" layer="94">-</text>
+<pin name="+" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="-" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="KEYSTONE_3003">
+<description>Keystone 3003 20mm coin cell battery clip</description>
+<gates>
+<gate name="G$1" symbol="1V2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KEYSTONE_3003">
+<connects>
+<connect gate="G$1" pin="+" pad="P$1 P$2"/>
+<connect gate="G$1" pin="-" pad="P$3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3681,15 +3736,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LED52" library="adafruit" deviceset="LED" device="3MM"/>
 <part name="LED53" library="adafruit" deviceset="LED" device="3MM"/>
 <part name="LED54" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="LED55" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="LED56" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="LED57" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="LED58" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="LED59" library="adafruit" deviceset="LED" device="3MM"/>
-<part name="LED60" library="adafruit" deviceset="LED" device="3MM"/>
 <part name="U$4" library="switch" deviceset="JS202011CQN" device=""/>
 <part name="R1" library="adafruit" deviceset="R-US_" device="0207/9"/>
 <part name="JP1" library="SparkFun-Passives" deviceset="JUMPER-PAD-2-NO" device=""/>
+<part name="U$5" library="battery" deviceset="KEYSTONE_3003" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3750,15 +3800,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="LED52" gate="G$1" x="129.54" y="27.94" rot="R90"/>
 <instance part="LED53" gate="G$1" x="129.54" y="35.56" rot="R90"/>
 <instance part="LED54" gate="G$1" x="129.54" y="43.18" rot="R90"/>
-<instance part="LED55" gate="G$1" x="144.78" y="5.08" rot="R90"/>
-<instance part="LED56" gate="G$1" x="144.78" y="12.7" rot="R90"/>
-<instance part="LED57" gate="G$1" x="144.78" y="20.32" rot="R90"/>
-<instance part="LED58" gate="G$1" x="144.78" y="27.94" rot="R90"/>
-<instance part="LED59" gate="G$1" x="144.78" y="35.56" rot="R90"/>
-<instance part="LED60" gate="G$1" x="144.78" y="43.18" rot="R90"/>
 <instance part="U$4" gate="G$1" x="30.48" y="71.12"/>
 <instance part="R1" gate="G$1" x="78.74" y="71.12"/>
 <instance part="JP1" gate="G$1" x="78.74" y="63.5"/>
+<instance part="U$5" gate="G$1" x="129.54" y="71.12"/>
 </instances>
 <busses>
 </busses>
@@ -3954,27 +3999,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="LED49" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="48.26" x2="139.7" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="43.18" x2="139.7" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="35.56" x2="139.7" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="27.94" x2="139.7" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="20.32" x2="139.7" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="12.7" x2="139.7" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="5.08" x2="142.24" y2="5.08" width="0.1524" layer="91"/>
-<label x="139.7" y="48.26" size="1.778" layer="95"/>
-<wire x1="139.7" y1="43.18" x2="142.24" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="35.56" x2="142.24" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="27.94" x2="142.24" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="20.32" x2="142.24" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="12.7" x2="142.24" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="LED55" gate="G$1" pin="A"/>
-<pinref part="LED56" gate="G$1" pin="A"/>
-<pinref part="LED57" gate="G$1" pin="A"/>
-<pinref part="LED58" gate="G$1" pin="A"/>
-<pinref part="LED59" gate="G$1" pin="A"/>
-<pinref part="LED60" gate="G$1" pin="A"/>
-</segment>
-<segment>
 <wire x1="83.82" y1="71.12" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
 <label x="88.9" y="71.12" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -4048,27 +4072,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="LED15" gate="G$1" pin="C"/>
 <pinref part="LED14" gate="G$1" pin="C"/>
 <pinref part="LED13" gate="G$1" pin="C"/>
-</segment>
-<segment>
-<wire x1="149.86" y1="43.18" x2="152.4" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="43.18" x2="152.4" y2="35.56" width="0.1524" layer="91"/>
-<label x="152.4" y="0" size="1.778" layer="95" rot="MR180"/>
-<wire x1="152.4" y1="35.56" x2="152.4" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="27.94" x2="152.4" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="20.32" x2="152.4" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="12.7" x2="152.4" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="5.08" x2="152.4" y2="0" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="35.56" x2="152.4" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="27.94" x2="152.4" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="5.08" x2="152.4" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="12.7" x2="152.4" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="20.32" x2="152.4" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="LED55" gate="G$1" pin="C"/>
-<pinref part="LED56" gate="G$1" pin="C"/>
-<pinref part="LED57" gate="G$1" pin="C"/>
-<pinref part="LED58" gate="G$1" pin="C"/>
-<pinref part="LED59" gate="G$1" pin="C"/>
-<pinref part="LED60" gate="G$1" pin="C"/>
 </segment>
 <segment>
 <wire x1="134.62" y1="43.18" x2="137.16" y2="43.18" width="0.1524" layer="91"/>
@@ -4196,6 +4199,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="LED26" gate="G$1" pin="C"/>
 <pinref part="LED25" gate="G$1" pin="C"/>
 </segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="-"/>
+<wire x1="119.38" y1="71.12" x2="124.46" y2="71.12" width="0.1524" layer="91"/>
+<label x="119.38" y="71.12" size="1.778" layer="95" rot="MR0"/>
+</segment>
 </net>
 <net name="SW_BATT" class="0">
 <segment>
@@ -4219,6 +4227,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$4" gate="G$1" pin="3"/>
 <wire x1="20.32" y1="68.58" x2="25.4" y2="68.58" width="0.1524" layer="91"/>
 <label x="20.32" y="68.58" size="1.778" layer="95" rot="MR0"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="+"/>
+<wire x1="134.62" y1="71.12" x2="139.7" y2="71.12" width="0.1524" layer="91"/>
+<label x="139.7" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
