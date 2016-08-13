@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9139,7 +9139,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pad name="P$1" x="-10.5537" y="0" drill="1.6" diameter="2.54"/>
 <pad name="P$2" x="10.5537" y="0" drill="1.6" diameter="2.54"/>
 <circle x="0" y="0" radius="10" width="0.127" layer="21"/>
-<pad name="P$3" x="0" y="0" drill="0.7" diameter="6.4516" shape="octagon"/>
 <wire x1="-10.5537" y1="9.2964" x2="-10.5537" y2="-4.064" width="0.127" layer="21"/>
 <wire x1="-10.5537" y1="-4.064" x2="-3.7846" y2="-10.5664" width="0.127" layer="21"/>
 <wire x1="-3.7846" y1="-10.5664" x2="3.7846" y2="-10.5664" width="0.127" layer="21"/>
@@ -9148,6 +9147,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="10.5537" y1="9.2964" x2="-10.5537" y2="9.2964" width="0.127" layer="21"/>
 <text x="-10.16" y="10.16" size="1.27" layer="25">&gt;NAME</text>
 <text x="-10.16" y="-11.43" size="1.27" layer="27" align="top-left">&gt;VALUE</text>
+<smd name="P$3" x="0" y="0" dx="6.4516" dy="6.4516" layer="1"/>
 </package>
 </packages>
 </library>
@@ -9657,14 +9657,16 @@ design rules under a new name.</description>
 </signal>
 <signal name="VBATT">
 <contactref element="U$4" pad="3"/>
-<contactref element="U$5" pad="P$1"/>
-<contactref element="U$5" pad="P$2"/>
-<wire x1="46.5963" y1="10.16" x2="57.0992" y2="20.6629" width="0.8128" layer="1"/>
 <wire x1="57.0992" y1="20.6629" x2="57.0992" y2="23.749" width="0.8128" layer="1"/>
-<wire x1="67.7037" y1="10.16" x2="57.15" y2="20.7137" width="0.8128" layer="1"/>
 <wire x1="57.15" y1="20.7137" x2="57.15" y2="22.86" width="0.8128" layer="1"/>
 <wire x1="57.15" y1="22.86" x2="57.0992" y2="22.9108" width="0.8128" layer="1"/>
 <wire x1="57.0992" y1="22.9108" x2="57.0992" y2="23.749" width="0.8128" layer="1"/>
+<contactref element="U$5" pad="P$1"/>
+<contactref element="U$5" pad="P$2"/>
+<wire x1="57.0992" y1="20.6629" x2="56.95315" y2="20.51685" width="0.8128" layer="1"/>
+<wire x1="56.95315" y1="20.51685" x2="46.5963" y2="10.16" width="0.8128" layer="1"/>
+<wire x1="67.7037" y1="10.16" x2="57.34685" y2="20.51685" width="0.8128" layer="1"/>
+<wire x1="57.34685" y1="20.51685" x2="56.95315" y2="20.51685" width="0.8128" layer="1"/>
 </signal>
 </signals>
 </board>
