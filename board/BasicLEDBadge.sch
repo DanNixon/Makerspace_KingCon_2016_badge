@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3729,7 +3729,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <plain>
 </plain>
 <instances>
-<instance part="U$4" gate="G$1" x="20.32" y="43.18"/>
+<instance part="U$4" gate="G$1" x="0" y="40.64" rot="R180"/>
 <instance part="R1" gate="G$1" x="45.72" y="38.1" rot="R90"/>
 <instance part="JP1" gate="G$1" x="55.88" y="38.1" rot="R90"/>
 <instance part="U$5" gate="G$1" x="10.16" y="17.78" rot="R90"/>
@@ -3760,8 +3760,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="SW_BATT" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="2"/>
-<wire x1="10.16" y1="43.18" x2="15.24" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="43.18" x2="10.16" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="45.72" x2="45.72" y2="43.18" width="0.1524" layer="91"/>
@@ -3771,14 +3769,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="55.88" y1="45.72" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="50.8" x2="50.8" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="50.8" x2="50.8" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="3"/>
+<wire x1="5.08" y1="43.18" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VBATT" class="0">
 <segment>
-<pinref part="U$4" gate="G$1" pin="3"/>
-<wire x1="10.16" y1="40.64" x2="15.24" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="+"/>
 <wire x1="10.16" y1="40.64" x2="10.16" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="2"/>
+<wire x1="10.16" y1="40.64" x2="5.08" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
